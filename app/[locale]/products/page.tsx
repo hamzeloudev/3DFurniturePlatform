@@ -3,43 +3,12 @@
 import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
+import { demoProducts, getProductsByCategory } from '@/lib/data/demoProducts';
 
 export default function ProductsPage() {
   const t = useTranslations('products');
   const locale = useLocale();
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-
-  // Demo products - replace with actual database query
-  const products = [
-    {
-      id: '1',
-      name: locale === 'en' ? 'Modern Sofa' : 'مبل مدرن',
-      category: 'sofa',
-      price: 1299,
-      image: '🛋️',
-    },
-    {
-      id: '2',
-      name: locale === 'en' ? 'Classic Bed' : 'تخت کلاسیک',
-      category: 'bed',
-      price: 899,
-      image: '🛏️',
-    },
-    {
-      id: '3',
-      name: locale === 'en' ? 'Elegant Dressing Table' : 'میز آرایش شیک',
-      category: 'dressingTable',
-      price: 599,
-      image: '💄',
-    },
-    {
-      id: '4',
-      name: locale === 'en' ? 'Modern TV Table' : 'میز تلویزیون مدرن',
-      category: 'tvTable',
-      price: 499,
-      image: '📺',
-    },
-  ];
 
   const categories = [
     { id: 'all', name: locale === 'en' ? 'All' : 'همه' },
@@ -47,12 +16,10 @@ export default function ProductsPage() {
     { id: 'bed', name: locale === 'en' ? 'Beds' : 'تخت‌ها' },
     { id: 'dressingTable', name: locale === 'en' ? 'Dressing Tables' : 'میز آرایش' },
     { id: 'tvTable', name: locale === 'en' ? 'TV Tables' : 'میز تلویزیون' },
+    { id: 'chair', name: locale === 'en' ? 'Chairs' : 'صندلی‌ها' },
   ];
 
-  const filteredProducts =
-    selectedCategory === 'all'
-      ? products
-      : products.filter((p) => p.category === selectedCategory);
+  const filteredProducts = getProductsByCategory(selectedCategory);
 
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -80,22 +47,48 @@ export default function ProductsPage() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {filteredProducts.map((product) => (
             <div
-              key={product.id}
+              key={product._id}
               className="overflow-hidden rounded-xl bg-white shadow-md transition-all hover:shadow-xl"
             >
-              <div className="flex h-64 items-center justify-center bg-gray-100 text-8xl">
-                {product.image}
+              <div className="flex h-64 items-center justify-center bg-gray-100">
+                <div className="text-center">
+                  <div className="mb-2 text-8xl">
+                    {product.category === 'sofa' && '🛋️'}
+                    {product.category === 'bed' && '🛏️'}
+                    {product.category === 'chair' && '🪑'}
+                    {product.category === 'dressingTable' && '💄'}
+                    {product.category === 'tvTable' && '📺'}
+                    {product.category === 'table' && '🪑'}
+                  </div>
+                  {product.featured && (
+                    <span className="inline-block rounded-full bg-primary-600 px-3 py-1 text-xs font-semibold text-white">
+                      {locale === 'en' ? 'Featured' : 'ویژه'}
+                    </span>
+                  )}
+                </div>
               </div>
 
               <div className="p-6">
                 <h3 className="mb-2 text-xl font-bold text-gray-900">{product.name}</h3>
+                <p className="mb-3 line-clamp-2 text-sm text-gray-600">{product.description}</p>
+
+                {/* Tags */}
+                <div className="mb-3 flex flex-wrap gap-1">
+                  {product.tags.slice(0, 3).map((tag) => (
+                    <span key={tag} className="rounded bg-gray-100 px-2 py-1 text-xs text-gray-600">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
                 <p className="mb-4 text-2xl font-bold text-primary-600">
-                  ${product.price.toLocaleString()}
+                  ${product.basePrice.toLocaleString()}
+                  <span className="text-sm font-normal text-gray-500"> {locale === 'en' ? 'base price' : 'قیمت پایه'}</span>
                 </p>
 
                 <div className="space-y-2">
                   <Link
-                    href={`/${locale}/configurator?product=${product.id}`}
+                    href={`/${locale}/configurator?product=${product._id}`}
                     className="block w-full rounded-lg bg-primary-600 px-4 py-2 text-center font-semibold text-white transition-all hover:bg-primary-500"
                   >
                     {t('customizeNow')}
