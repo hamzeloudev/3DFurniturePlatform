@@ -1,0 +1,107 @@
+{
+  "nav": {
+    "home": "خانه",
+    "products": "محصولات",
+    "configurator": "طراح",
+    "inspiration": "الهام",
+    "about": "درباره ما",
+    "contact": "تماس",
+    "login": "ورود",
+    "register": "ثبت نام",
+    "logout": "خروج",
+    "cart": "سبد خرید",
+    "profile": "پروفایل"
+  },
+  "hero": {
+    "title": "شروع به طراحی خانه رویایی خود کنید",
+    "subtitle": "مبلمان خود را به صورت سه بعدی با نمایش لحظه‌ای سفارشی کنید",
+    "cta": "شروع به طراحی خانه رویایی خود کنید",
+    "viewInAR": "مشاهده در خانه شما (واقعیت افزوده)"
+  },
+  "categories": {
+    "sofas": "مبل‌ها",
+    "chairs": "صندلی‌ها",
+    "tables": "میزها",
+    "beds": "تخت خواب‌ها",
+    "dressingTables": "میز آرایش",
+    "tvTables": "میز تلویزیون",
+    "explore": "کاوش"
+  },
+  "configurator": {
+    "title": "طراح مبلمان",
+    "tabs": {
+      "model": "مدل",
+      "woodType": "نوع چوب",
+      "legsAndArts": "پایه‌ها و هنر"
+    },
+    "legs": {
+      "title": "پایه‌ها",
+      "modernMetal": "فلزی مدرن",
+      "carvedWooden": "چوبی حکاکی شده",
+      "modernWooden": "چوبی مدرن",
+      "carvedArea": "منطقه حکاکی",
+      "finalMetal": "فلزی نهایی"
+    },
+    "headboardArts": {
+      "title": "هنر تخت خواب",
+      "floralCarving": "حکاکی گلدار",
+      "fowetCarving": "حکاکی فاوت"
+    },
+    "price": "قیمت",
+    "addToCart": "افزودن به سبد",
+    "saveDesign": "ذخیره طرح",
+    "shareDesign": "اشتراک‌گذاری طرح"
+  },
+  "products": {
+    "title": "مجموعه مبلمان",
+    "filter": "فیلتر",
+    "sort": "مرتب‌سازی",
+    "priceRange": "محدوده قیمت",
+    "style": "سبک",
+    "material": "مواد",
+    "customizeNow": "سفارشی‌سازی",
+    "viewInAR": "مشاهده در واقعیت افزوده",
+    "addToCart": "افزودن به سبد"
+  },
+  "cart": {
+    "title": "سبد خرید",
+    "empty": "سبد خرید شما خالی است",
+    "total": "جمع کل",
+    "checkout": "تسویه حساب",
+    "continueShopping": "ادامه خرید"
+  },
+  "auth": {
+    "login": "ورود",
+    "register": "ثبت نام",
+    "email": "ایمیل",
+    "password": "رمز عبور",
+    "confirmPassword": "تایید رمز عبور",
+    "forgotPassword": "فراموشی رمز عبور؟",
+    "noAccount": "حساب کاربری ندارید؟",
+    "hasAccount": "حساب کاربری دارید؟"
+  },
+  "admin": {
+    "dashboard": "داشبورد",
+    "products": "محصولات",
+    "orders": "سفارشات",
+    "users": "کاربران",
+    "analytics": "تحلیل",
+    "addProduct": "افزودن محصول",
+    "editProduct": "ویرایش محصول",
+    "deleteProduct": "حذف محصول"
+  },
+  "common": {
+    "search": "جستجو",
+    "loading": "در حال بارگذاری...",
+    "error": "خطایی رخ داد",
+    "success": "موفقیت",
+    "save": "ذخیره",
+    "cancel": "لغو",
+    "delete": "حذف",
+    "edit": "ویرایش",
+    "close": "بستن",
+    "next": "بعدی",
+    "previous": "قبلی",
+    "submit": "ارسال"
+  }
+}

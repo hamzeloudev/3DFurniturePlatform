@@ -1,0 +1,107 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "configurator": "Configurator",
+    "inspiration": "Inspiration",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "cart": "Cart",
+    "profile": "Profile"
+  },
+  "hero": {
+    "title": "Start Designing Your Dream Home",
+    "subtitle": "Customize your furniture in 3D with real-time visualization",
+    "cta": "Start Designing Your Dream Home",
+    "viewInAR": "View in Your Home (AR)"
+  },
+  "categories": {
+    "sofas": "Sofas",
+    "chairs": "Chairs",
+    "tables": "Tables",
+    "beds": "Bed Headboards",
+    "dressingTables": "Dressing Tables",
+    "tvTables": "TV Tables",
+    "explore": "Explore"
+  },
+  "configurator": {
+    "title": "Furniture Configurator",
+    "tabs": {
+      "model": "Model",
+      "woodType": "Wood Type",
+      "legsAndArts": "Legs & Arts"
+    },
+    "legs": {
+      "title": "Legs",
+      "modernMetal": "Modern Metal",
+      "carvedWooden": "Carved Wooden",
+      "modernWooden": "Modern Wooden",
+      "carvedArea": "Carved Area",
+      "finalMetal": "Final Metal"
+    },
+    "headboardArts": {
+      "title": "Headboard Arts",
+      "floralCarving": "Floral Carving",
+      "fowetCarving": "Fowet Carving"
+    },
+    "price": "Price",
+    "addToCart": "Add to Cart",
+    "saveDesign": "Save Design",
+    "shareDesign": "Share Design"
+  },
+  "products": {
+    "title": "Furniture Collection",
+    "filter": "Filter",
+    "sort": "Sort",
+    "priceRange": "Price Range",
+    "style": "Style",
+    "material": "Material",
+    "customizeNow": "Customize Now",
+    "viewInAR": "View in AR",
+    "addToCart": "Add to Cart"
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty",
+    "total": "Total",
+    "checkout": "Checkout",
+    "continueShopping": "Continue Shopping"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "forgotPassword": "Forgot Password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "products": "Products",
+    "orders": "Orders",
+    "users": "Users",
+    "analytics": "Analytics",
+    "addProduct": "Add Product",
+    "editProduct": "Edit Product",
+    "deleteProduct": "Delete Product"
+  },
+  "common": {
+    "search": "Search",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit"
+  }
+}
