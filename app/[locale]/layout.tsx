@@ -8,7 +8,7 @@ import Footer from '@/components/layout/Footer';
 
 type Props = {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 export function generateStaticParams() {
@@ -17,8 +17,10 @@ export function generateStaticParams() {
 
 export default async function LocaleLayout({
   children,
-  params: { locale },
+  params,
 }: Props) {
+  const { locale } = await params;
+  
   // Validate locale
   if (!locales.includes(locale as any)) {
     notFound();
